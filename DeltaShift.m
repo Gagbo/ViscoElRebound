@@ -68,7 +68,7 @@ scatter(Tabdel(:,1),Tabdel(:,3),'r+');
 %title(['Verification of COR']);
 xlabel('Temperature (Celsius)','FontSize',15);
 ylabel('COR / exp(-1.10*tan \delta)','FontSize',15);
-print(Verif,'-depsc','-r300','/run/media/apaloo/Dropbox/Stage M1/Images/Resultats/Anton-9010-1-All/VerifCORDelta.eps');
+print(Verif,'-depsc','-r300','/path/to/eps');
 hold off;
 
 

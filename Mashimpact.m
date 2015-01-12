@@ -64,7 +64,7 @@ for i = 1:nT
 	Output(i,1,1) = LTemp(i)+3.1*10^(-6)*LTemp(i)^3-0.0014*LTemp(i)^2+0.2*LTemp(i)-5.3;
 end
 
-Outsim = dlmread('/run/media/apaloo/Dropbox/Stage M1/Images/Resultats/Efforts/Temp-Peak-Dura-Area-COR-Sim69-4n.txt');
+Outsim = dlmread('/path/to/Temp-Peak-Dura-Area-COR-Sim69-4n.txt');
 Sizsim = size(Outsim,1);
 
 h1 = figure;
@@ -105,16 +105,16 @@ hold all;
 %title([ID,' COR with respect to temperature']);
 xlabel('Temperature (Celsius)','FontSize',15);
 ylabel('COR','FontSize',15);
-CORexp = dlmread('/run/media/apaloo/Dropbox/Stage M1/Images/Resultats/Temp-Rest-Std.txt');
+CORexp = dlmread('/path/to/Temp-Rest-Std.txt');
 errorbar(CORexp(:,1),CORexp(:,2),CORexp(:,3));
 xlim([0 200]);
 hold off;
 
 
-print(h1,'-depsc','-r300',['/run/media/apaloo/Dropbox/Stage M1/Images/Resultats/Efforts/',ID,'-Peak.eps']);
-print(h2,'-depsc','-r300',['/run/media/apaloo/Dropbox/Stage M1/Images/Resultats/Efforts/',ID,'-Dura.eps']);
-print(h3,'-depsc','-r300',['/run/media/apaloo/Dropbox/Stage M1/Images/Resultats/Efforts/',ID,'-Area.eps']);
-print(h4,'-depsc','-r300',['/run/media/apaloo/Dropbox/Stage M1/Images/Resultats/Efforts/',ID,'-COR.eps']);
+print(h1,'-depsc','-r300',['/path/to/',ID,'-Peak.eps']);
+print(h2,'-depsc','-r300',['/path/to/',ID,'-Dura.eps']);
+print(h3,'-depsc','-r300',['/path/to/',ID,'-Area.eps']);
+print(h4,'-depsc','-r300',['/path/to/',ID,'-COR.eps']);
 
 %dlmwrite(['/home/gerry/Dropbox/Stage M1/Images/Resultats/Efforts/Temp-Peak-Std-',ID,'.txt'], [Output(:,1,1),Output(:,2,1),Output(:,2,2)], 'Delimiter', '\t', 'Precision', 4, 'newline', 'unix');
 %dlmwrite(['/home/gerry/Dropbox/Stage M1/Images/Resultats/Efforts/Temp-Dura-Std-',ID,'.txt'], [Output(:,1,1),Output(:,3,1),Output(:,3,2)], 'Delimiter', '\t', 'Precision', 4, 'newline', 'unix');

@@ -94,7 +94,7 @@ ylim([0 1.2*Peak]);
 %title([filename,' : temperature is ', num2str(Cond(2)),' C, ball is n ',num2str(Cond(3))]);
 xlabel('Time (s)','FontSize',15);
 ylabel('Force (N)','FontSize',15);
-%print(h,'-depsc','-r300','/run/media/apaloo/Dropbox/Stage M1/Images/Resultats/Efforts/Sim90.eps');
+%print(h,'-depsc','-r300','/path/to/eps');
 hold off;
 
 end

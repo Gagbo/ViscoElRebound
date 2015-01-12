@@ -84,7 +84,7 @@ if picmax==picmaxeff
     %set(gca,'FontSize',15);
     %ylabel('Relative sound level');
 	%title([filename,' Peaks verification']);
-    %print(Verifpic,'-depsc','-r300','/run/media/apaloo/Dropbox/Stage M1/Images/Resultats/Anapics/BigPeaksVerif.eps');
+    %print(Verifpic,'-depsc','-r300','/path/to/eps');
 
 	%Post-treatment
 	for i = 1:picmax

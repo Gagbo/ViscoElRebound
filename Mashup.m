@@ -113,8 +113,8 @@ ylabel('Coef. of restitution','FontSize',15);
 ylim([0 1]);
 xlim([-0.5 200]);
 
-print(h,'-depsc','-r300','/run/media/apaloo/Dropbox/Stage M1/Images/Resultats/RestTemp9010.eps');
-dlmwrite('/run/media/apaloo/Dropbox/Stage M1/Images/Resultats/Temp-Rest-Std.txt', Sortie, 'delimiter', '\t', 'precision', 4, 'newline', 'unix');
+print(h,'-depsc','-r300','/path/to/RestTemp9010.eps');
+dlmwrite('/path/to/Temp-Rest-Std.txt', Sortie, 'delimiter', '\t', 'precision', 4, 'newline', 'unix');
 
 hold off;
 
